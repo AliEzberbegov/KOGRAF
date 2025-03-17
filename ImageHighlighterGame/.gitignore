@@ -13,6 +13,7 @@ target/
 *.iml
 *.ipr
 *.iws
+*.mvn
 out/
 
 # OS files
