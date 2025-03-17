@@ -1,0 +1,146 @@
+.root {
+    -fx-background-color: #FAFAFA;
+    -fx-font-family: "Inter", "Open Sans", "Segoe UI", sans-serif;
+    -fx-font-size: 15px;
+    -fx-text-fill: #424242;
+}
+
+.hbox, .vbox, .flow-pane {
+    -fx-spacing: 12;
+    -fx-padding: 16;
+    -fx-background-color: #f7f7f7;
+    -fx-border-color: #ddd;
+    -fx-border-width: 0 0 1 0;
+}
+
+.button {
+    -fx-background-radius: 8;
+    -fx-border-radius: 8;
+    -fx-text-fill: #ffffff;
+    -fx-padding: 8 16;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.07), 1, 0.1, 0, 1);
+    -fx-border-color: transparent;
+    -fx-background-color: linear-gradient(to bottom, #80CBC4, #4DB6AC);
+}
+
+.button:hover {
+    -fx-background-color: linear-gradient(to bottom, #B2DFDB, #80CBC4);
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.15), 4, 0.2, 0, 2);
+}
+
+.button:pressed {
+    -fx-background-color: #4DB6AC;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 2, 0.1, 0, 1);
+}
+
+.slider {
+    -fx-min-width: 160;
+    -fx-padding: 0 8;
+}
+
+.check-box {
+    -fx-text-fill: #424242;
+    -fx-font-weight: 500;
+}
+
+.morph-check {
+    -fx-text-fill: #558B2F; /* Придаём чуть более тёмный оливковый */
+    -fx-font-weight: 600;
+}
+.morph-check:hover {
+    -fx-text-fill: #33691E;
+}
+
+.spinner {
+    -fx-pref-width: 80;
+    -fx-alignment: center-left;
+}
+.spinner .text-field {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #cccccc;
+    -fx-border-radius: 6;
+    -fx-background-radius: 6;
+}
+.spinner .increment-arrow-button,
+.spinner .decrement-arrow-button {
+    -fx-background-color: #f9f9f9;
+    -fx-border-color: #dddddd;
+    -fx-cursor: hand;
+}
+.spinner .increment-arrow-button:hover,
+.spinner .decrement-arrow-button:hover {
+    -fx-background-color: #eeeeee;
+}
+
+.color-picker {
+    -fx-pref-width: 110;
+}
+
+.label {
+    -fx-text-fill: #424242;
+    -fx-font-weight: 500;
+}
+
+.tab-pane {
+    -fx-background-color: #ffffff;
+    -fx-tab-min-width: 100;
+    -fx-tab-max-width: 250;
+}
+.tab-header-background {
+    -fx-background-color: #ECEFF1;
+    -fx-border-color: #CFD8DC;
+}
+.tab {
+    -fx-padding: 8 16;
+    -fx-font-weight: 600;
+    -fx-background-radius: 0;
+}
+.tab:selected {
+    -fx-background-color: #ffffff;
+    -fx-border-color: transparent;
+    -fx-effect: innershadow(two-pass-box, rgba(0,0,0,0.07), 0, 0, 0, 1);
+}
+
+.tab-label:hover {
+    -fx-text-fill: #00796B;
+    -fx-cursor: hand;
+}
+
+.tooltip {
+    -fx-font-size: 13px;
+    -fx-padding: 10;
+    -fx-background-color: #424242;
+    -fx-text-fill: #fff;
+    -fx-background-radius: 6;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 5, 0.3, 0, 1);
+}
+
+
+.tab {
+    -fx-background-radius: 8 8 0 0;
+    -fx-border-radius: 8 8 0 0;
+    -fx-background-color: #e0e0e0;
+}
+
+.tab:selected {
+    -fx-background-color: #ffffff;
+    -fx-border-color: transparent;
+    -fx-effect: innershadow(two-pass-box, rgba(0,0,0,0.07), 0, 0, 0, 1);
+    -fx-background-radius: 8 8 0 0;
+    -fx-border-radius: 8 8 0 0;
+}
+
+.button:focus,
+.check-box:focus,
+.spinner:focus,
+.slider:focus,
+.color-picker:focus,
+.tab:focus,
+.tab-label:focus,
+.tab-pane:focus {
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+    -fx-background-insets: 0;
+    -fx-border-insets: 0;
+}

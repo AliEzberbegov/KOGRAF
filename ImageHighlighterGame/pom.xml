@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+                             https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.kograf</groupId>
+    <artifactId>ImageHighlighterGame</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <name>ImageHighlighterGame</name>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <!-- Параметры компиляции на Java 22 (если вы действительно используете JDK 22) -->
+        <maven.compiler.source>22</maven.compiler.source>
+        <maven.compiler.target>22</maven.compiler.target>
+
+        <!-- Версия JUnit -->
+        <junit.version>5.10.2</junit.version>
+    </properties>
+
+    <dependencies>
+        <!-- JavaFX: controls, fxml, swing (для SwingFXUtils) -->
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-controls</artifactId>
+            <version>22.0.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-fxml</artifactId>
+            <version>22.0.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-swing</artifactId>
+            <version>22.0.1</version>
+        </dependency>
+
+        <!-- JUnit 5 -->
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-api</artifactId>
+            <version>${junit.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-engine</artifactId>
+            <version>${junit.version}</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <!-- Плагин компиляции (на Java 22) -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.13.0</version>
+                <configuration>
+                    <source>22</source>
+                    <target>22</target>
+                </configuration>
+            </plugin>
+
+            <!-- Единая конфигурация плагина JavaFX -->
+            <plugin>
+                <groupId>org.openjfx</groupId>
+                <artifactId>javafx-maven-plugin</artifactId>
+                <version>0.0.8</version>
+                <configuration>
+                    <!-- Укажите свой реальный класс с методом main,
+                         например org.kograf.imagehighlightergame.Main,
+                         БЕЗ слэшей -->
+                    <mainClass>org.kograf.imagehighlightergame.Main</mainClass>
+
+                    <!-- Дополнительные настройки сборки/запуска -->
+                    <launcher>app</launcher>
+                    <jlinkZipName>app</jlinkZipName>
+                    <jlinkImageName>app</jlinkImageName>
+                    <noManPages>true</noManPages>
+                    <stripDebug>true</stripDebug>
+                    <noHeaderFiles>true</noHeaderFiles>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>

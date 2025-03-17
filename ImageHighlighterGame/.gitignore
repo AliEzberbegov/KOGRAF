@@ -1,0 +1,20 @@
+# Java general
+*.class
+*.log
+*.jar
+*.war
+*.ear
+
+# Maven target folder
+target/
+
+# IntelliJ IDEA
+.idea/
+*.iml
+*.ipr
+*.iws
+out/
+
+# OS files
+.DS_Store
+Thumbs.db
